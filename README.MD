@@ -1,15 +1,21 @@
-CHANGE SETTINGS ON YOUR GAME AT YOUR OWN RISK
-I PROVIDE NO SUPPORT AND ASSUME NO RESPONSIBILITY FOR ANYTHING YOU BREAK TRYING THIS
+# Multiplayer bandwidth fix settings for Satisfactory
 
-Browse to `%AppData%\..\Local\FactoryGame\Saved\Config\Windowsnoeditor\` and modify your files with ONLY these parameters:
+## Important notes before you get started
+I've provided my full .ini files as a reference. __**DO NOT**__ copy my .ini files over your own. Only change the settings provided below in your own.
 
-Step 1: Edit your .ini files with the bandwidth settings
-Step 2: right click --> Properties --> "read only"
-Step 3: change network quality in game to medium
-Step 4: change network quality in game to ultra
+## The process
+* Step 0: Understand that you assume all risk for anything you break on your system making these changes
+* Step 1: Open explorer or a run bar and paste this in the text field `%AppData%\..\Local\FactoryGame\Saved\Config\Windowsnoeditor\`
+* Step 2: Make a copy of all your original files and move them somewhere safe
+* Step 3: Edit your .ini files with the items listed in reference changes
+* Step 4: For each file edited, right click --> Properties --> check the box for "read only"
+* Step 5: change network quality in game to medium
+* Step 6: change network quality in game to ultra
 
-`Engine.ini`
-```[/Script/Engine.Player]
+## Reference changes
+```
+# Engine.ini
+[/Script/Engine.Player]
 ConfiguredInternetSpeed=104857600
 ConfiguredLanSpeed=104857600
 
@@ -19,17 +25,19 @@ MaxInternetClientRate=104857600
 
 [/Script/SocketSubsystemEpic.EpicNetDriver]
 MaxClientRate=104857600
-MaxInternetClientRate=104857600```
+MaxInternetClientRate=104857600 ```
 
-`Game.ini`
-```[/Script/Engine.GameNetworkManager]
+# Game.ini
+[/Script/Engine.GameNetworkManager]
 TotalNetBandwidth=104857600
 MaxDynamicBandwidth=104857600
-MinDynamicBandwidth=10485760```
+MinDynamicBandwidth=10485760
 
-`Scalability.ini`
+# Scalability.ini
+
 [NetworkQuality@3]
 TotalNetBandwidth=104857600
 MaxDynamicBandwidth=104857600
 MinDynamicBandwidth=10485760
+```
 
