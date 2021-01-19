@@ -32,12 +32,5 @@ MaxInternetClientRate=104857600 ```
 TotalNetBandwidth=104857600
 MaxDynamicBandwidth=104857600
 MinDynamicBandwidth=10485760
-
-# Scalability.ini
-
-[NetworkQuality@3]
-TotalNetBandwidth=104857600
-MaxDynamicBandwidth=104857600
-MinDynamicBandwidth=10485760
 ```
 
